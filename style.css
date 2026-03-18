@@ -315,3 +315,104 @@ margin-right:10px;
 height:40px;
 opacity:0.8;
 }
+/* Menu item cha */
+.menu-item {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown (ẩn mặc định) */
+.dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    min-width: 200px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    z-index: 1000;
+}
+
+/* Style từng item */
+.dropdown a {
+    display: block;
+    padding: 10px;
+    color: black;
+    text-decoration: none;
+}
+
+.dropdown a:hover {
+    background: #f2f2f2;
+}
+
+/* Hover thì hiện menu */
+.menu-item:hover .dropdown {
+    display: block;
+}
+.dropdown {
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.menu-item:hover .dropdown {
+    display: block;
+    opacity: 1;
+}
+/* PRODUCT CARD */
+.product-card{
+    background: #fff;
+    border-radius: 10px;
+    padding: 10px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+/* HIỆU ỨNG HOVER */
+.product-card:hover{
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* ẢNH */
+.product-card img{
+    width: 100%;
+    transition: 0.3s;
+    border-radius: 8px;
+}
+
+/* ZOOM ẢNH */
+.product-card:hover img{
+    transform: scale(1.05);
+}
+
+/* TÊN SẢN PHẨM */
+.product-card h4{
+    transition: 0.3s;
+}
+
+/* ĐỔI MÀU */
+.product-card:hover h4{
+    color: #ff6b81;
+}
+.product-card{
+    position: relative;
+    overflow: hidden;
+}
+
+.product-card::after{
+    content: "Xem ngay";
+    position: absolute;
+    bottom: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #ff6b81;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 5px;
+    font-size: 13px;
+    transition: 0.3s;
+}
+
+.product-card:hover::after{
+    bottom: 10px;
+}

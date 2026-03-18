@@ -1,0 +1,367 @@
+/* CHI TIẾT SẢN PHẨM */
+
+.product-detail{
+display:flex;
+gap:60px;
+max-width:1100px;
+margin:40px auto;
+align-items:flex-start;
+
+background:white;
+padding:40px 60px;
+border-radius:10px;
+box-shadow:0 2px 8px rgba(0,0,0,0.08);
+}
+
+/* BÊN TRÁI */
+
+.product-gallery{
+width:50%;
+display:flex;
+flex-direction:column;
+align-items:center;
+margin-top:20px;
+}
+
+/* ẨN RADIO */
+.product-gallery input{
+display:none;
+}
+
+/* ẢNH CHÍNH */
+
+.main-image{
+width:100%;
+margin-bottom:15px;
+display:flex;
+justify-content:center;
+}
+
+.main-image img{
+width:100%;
+max-width:480px;
+display:none;
+border-radius:8px;
+}
+
+.main-image{
+width:100%;
+margin-bottom:15px;
+display:flex;
+justify-content:center;
+}
+
+.pic1{
+display:block;
+}
+
+/* HIỂN THỊ ẢNH */
+
+#img1:checked ~ .main-image .pic1{display:block;}
+#img2:checked ~ .main-image .pic2{display:block;}
+#img3:checked ~ .main-image .pic3{display:block;}
+#img4:checked ~ .main-image .pic4{display:block;}
+#img5:checked ~ .main-image .pic5{display:block;}
+
+
+/* THUMBNAIL */
+
+.thumbnail-row{
+display:flex;
+justify-content:center;
+gap:10px;
+margin-top:10px;
+}
+
+.thumbnail-row img{
+width:75px;
+height:75px;
+object-fit:cover;
+border:1px solid #ddd;
+border-radius:6px;
+cursor:pointer;
+transition:0.2s;
+}
+
+.thumbnail-row img:hover{
+border:2px solid #c40000;
+}
+
+
+/* BÊN PHẢI */
+
+.product-info{
+width:55%;
+display:flex;
+flex-direction:column;
+gap:14px;
+}
+
+.product-info h1{
+font-size:24px;
+font-weight:600;
+line-height:1.4;
+}
+
+/* GIÁ */
+
+.price{
+font-size:26px;
+color:#c40000;
+font-weight:700;
+}
+
+.old-price{
+font-size:14px;
+margin-left:10px;
+text-decoration:line-through;
+color:#888;
+}
+
+/* VOUCHER */
+
+.voucher{
+display:flex;
+gap:8px;
+margin:5px 0;
+}
+
+.voucher span{
+background:#eef1f7;
+padding:6px 10px;
+border-radius:5px;
+font-size:13px;
+}
+
+/* SỐ LƯỢNG */
+
+.quantity{
+display:flex;
+align-items:center;
+gap:6px;
+margin-top:10px;
+}
+
+.quantity button{
+width:30px;
+height:30px;
+border:1px solid #ccc;
+background:white;
+cursor:pointer;
+}
+
+.quantity input{
+width:40px;
+height:30px;
+text-align:center;
+border:1px solid #ccc;
+}
+
+/* NÚT MUA */
+
+.buttons{
+display:flex;
+gap:10px;
+margin-top:15px;
+}
+
+.buy{
+background:#c40000;
+color:white;
+padding:10px 22px;
+border:none;
+border-radius:4px;
+font-size:14px;
+cursor:pointer;
+}
+
+.buy:hover{
+background:#a80000;
+}
+
+.add-cart{
+background:white;
+border:1px solid #444;
+padding:10px 22px;
+border-radius:4px;
+font-size:14px;
+cursor:pointer;
+}
+
+.add-cart:hover{
+background:#f5f5f5;
+}
+
+/* TIÊU ĐỀ */
+
+.product-title{
+font-size:18px;
+font-weight:600;
+line-height:1.4;
+max-width:420px;
+}
+
+/* RATING */
+
+.rating{
+display:flex;
+align-items:center;
+gap:8px;
+font-size:14px;
+margin:8px 0;
+}
+
+.stars{
+color:#d60000;
+}
+
+.review{
+color:#d60000;
+}
+
+.line{
+color:#999;
+}
+
+/* FREESHIP */
+
+.freeship{
+display:inline-block;
+background:#0a2a4a;
+color:white;
+font-size:11px;
+padding:3px 8px;
+border-radius:12px;
+width:fit-content;
+margin:6px 0;
+}
+
+/* KHUNG GIÁ */
+
+.price-box{
+background:#f3f4f6;
+padding:18px;
+border-radius:6px;
+display:flex;
+align-items:center;
+gap:12px;
+margin:10px 0;
+}
+
+.new-price{
+font-size:28px;
+color:#c40000;
+font-weight:700;
+}
+
+.old-price{
+font-size:16px;
+color:#888;
+text-decoration:line-through;
+}
+
+.sale{
+background:#ff7a00;
+color:white;
+font-size:12px;
+padding:4px 6px;
+border-radius:3px;
+}
+
+.gift{
+background:#ff6b6b;
+color:white;
+font-size:12px;
+padding:4px 8px;
+border-radius:3px;
+}
+.product-bottom-container {
+    max-width: 1100px;
+    margin: 20px auto 60px auto; 
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08); /* Đổ bóng */
+    overflow: hidden;
+}
+
+/* Thanh Tab  */
+.product-tabs {
+    display: flex;
+    border-bottom: 1px solid #e5e7eb;
+    background: #fff;
+    padding: 0 10px;
+}
+
+.tab-item {
+    padding: 16px 20px;
+    font-size: 15px;
+    font-weight: 500;
+    color: #555;
+    cursor: pointer;
+    position: relative;
+    transition: 0.3s;
+}
+
+.tab-item:hover {
+    color: #c40000;
+}
+
+/* Tab Mô tả */
+.tab-item.active {
+    color: #333;
+    font-weight: 600;
+}
+
+/* Đường gạch dưới của tab đang chọn */
+.tab-item.active::after {
+    content: "";
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: #c40000; 
+}
+
+/* Nội dung của Tab */
+.tab-content {
+    padding: 25px 30px;
+    color: #333;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.tab-content p {
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+.tab-content strong {
+    font-weight: 600;
+}
+
+.tab-content ul {
+    margin-left: 20px;
+    margin-bottom: 15px;
+}
+
+.tab-content ul li {
+    list-style-type: disc;
+    margin-bottom: 10px;
+}
+
+
+@media (max-width: 900px) {
+    .product-bottom-container {
+        margin: 20px 15px;
+    }
+    
+    .product-tabs {
+        overflow-x: auto; 
+        white-space: nowrap;
+    }
+    
+    .tab-content {
+        padding: 20px 15px;
+    }
+}

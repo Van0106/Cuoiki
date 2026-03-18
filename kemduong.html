@@ -5,7 +5,9 @@
 <title>Kem dưỡng</title>
 
 <link rel="stylesheet" href="style.css">
-
+<link rel="stylesheet" href="style3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
 
 body{
@@ -80,7 +82,373 @@ border-radius:5px;
 text-decoration:none;
 font-size:13px;
 }
+.header-right{
+display:flex;
+align-items:center;
+gap:20px;
+white-space:nowrap;
+}
 
+body{
+font-family:'Poppins',sans-serif;
+margin:0;
+background:#fafafa;
+}
+
+
+/* TOP HEADER */
+
+.top-header{
+display:flex;
+align-items:center;
+justify-content:space-between;
+padding:15px 8%;
+background:white;
+}
+
+/* SEARCH */
+
+.search-box{
+position:relative;
+flex:1;
+margin:0 40px;
+display:flex;
+align-items:center;
+}
+
+.search-box input{
+width:100%;
+padding:10px 40px 10px 35px;
+border:none;
+border-bottom:2px solid #b30000;
+outline:none;
+}
+
+.search-icon{
+position:absolute;
+left:10px;
+top:50%;
+transform:translateY(-50%);
+font-size:18px;
+}
+
+/* RIGHT HEADER */
+
+.header-right{
+display:flex;
+align-items:center;
+gap:20px;
+white-space:nowrap;
+}
+
+.icons{
+display:flex;
+align-items:center;
+gap:20px;
+font-size:20px;
+cursor:pointer;
+}
+
+.cart{
+position:relative;
+}
+
+.cart-count{
+position:absolute;
+top:-8px;
+right:-8px;
+background:#c40000;
+color:white;
+font-size:12px;
+padding:2px 6px;
+border-radius:50%;
+}
+
+/* MENU BAR */
+
+.menu-bar{
+display:flex;
+align-items:center;
+justify-content:center;
+gap:40px;
+padding:12px 8%;
+
+background-image:url("bannerbe.png");
+background-size:cover;
+background-position:center;
+}
+
+.menu-bar nav{
+display:flex;
+gap:40px;
+}
+
+.menu-bar nav a{
+text-decoration:none;
+color:#333;
+font-weight:600;
+font-size:14px;
+display:flex;
+align-items:center;
+gap:5px;
+}
+
+.menu-icon{
+font-size:20px;
+margin-right:20px;
+}
+/* LOGO */
+.logo{
+width:110px;          
+height:110px;
+border-radius:50%;   
+object-fit:cover;
+border:1px solid white;
+box-shadow:0 6px 15px rgba(0,0,0,0.2);
+background:white;
+padding:8px;
+}
+
+
+/* SEARCH */
+
+.search{
+padding:8px;
+border-radius:20px;
+border:1px solid #ddd;
+}
+
+
+/* BANNER */
+
+.banner{
+width:100%;
+height:300px;
+overflow:hidden;
+}
+
+.banner img{
+width:100%;
+height:100%;
+object-fit:cover;
+}
+
+/* TITLE */
+
+.title{
+text-align:center;
+margin:40px 0 20px;
+}
+
+/* PRODUCTS */
+
+.products{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:30px;
+margin:30px auto;
+max-width:1200px;
+}
+
+.product{
+background:white;
+width:220px;
+padding:15px;
+text-align:center;
+border-radius:10px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+transition:0.3s;
+}
+
+.product:hover{
+transform:translateY(-5px);
+}
+
+.product img{
+width:100%;
+height:160px;
+object-fit:cover;
+border-radius:8px;
+}
+
+h2{
+text-align:center;
+margin-top:40px;
+}
+/*SAN PHAM BAN CHAY*/
+.section-title{
+text-align:center;
+margin:40px 0 20px;
+font-size:24px;
+}
+
+/*SAN PHAM MOI*/
+.product-card{
+min-width:220px;
+max-width:220px;
+background:white;
+border-radius:12px;
+box-shadow:0 5px 15px rgba(0,0,0,0.08);
+padding:15px;
+text-align:center;
+flex-shrink:0;
+}
+
+.product-card img{
+width:100%;
+height:160px;
+object-fit:contain;
+border-radius:8px;
+background:white;
+}
+
+.product-card h4{
+font-size:15px;
+margin-top:10px;
+font-weight:500;
+color:#333;
+line-height:1.4;
+height:42px;
+display:-webkit-box;
+-webkit-line-clamp:2;
+-webkit-box-orient:vertical;
+overflow:hidden;
+}
+.product-card a{
+text-decoration:none;   
+color:inherit;          
+display:block;
+}
+.product-container{
+max-width:1200px;
+margin:auto;
+}
+
+.container{
+max-width:1200px;
+margin:auto;
+padding:0 20px;
+}
+.product-slider{
+display:flex;
+gap:25px;
+overflow-x:auto;
+padding:20px 0;
+scroll-behavior:smooth;
+}
+
+.product-slider::-webkit-scrollbar{
+display:none;
+}
+/* FOOTER */
+
+.footer{
+background:#f8e6ea;
+color:#4b2e2e;
+padding:50px 0 20px;
+width:100vw;
+margin-left:calc(-50vw + 50%);
+}
+
+.footer-container{
+max-width:1200px;
+margin:auto;
+padding:0 20px;
+display:flex;
+justify-content:space-around;
+align-items:flex-start;
+gap:60px;
+flex-wrap:wrap;
+text-align:left;
+}
+
+.footer-col{
+flex:1;
+min-width:250px;
+}
+
+.footer-col h3{
+margin-bottom:15px;
+font-size:18px;
+}
+
+.footer-col a{
+display:block;
+color:#6b3a3a;
+text-decoration:none;
+margin:6px 0;
+font-size:14px;
+}
+
+.footer-col a:hover{
+text-decoration:underline;
+}
+
+.hotline span{
+color:#ff7a00;
+font-weight:bold;
+}
+
+.social{
+margin:15px 0;
+display:flex;
+gap:15px;
+font-size:22px;
+}
+
+.payment img{
+height:28px;
+margin-right:10px;
+}
+
+.footer-brand img{
+height:40px;
+opacity:0.8;
+}
+/* Menu item cha */
+.menu-item {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown (ẩn mặc định) */
+.dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    min-width: 200px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    z-index: 1000;
+}
+
+/* Style từng item */
+.dropdown a {
+    display: block;
+    padding: 10px;
+    color: black;
+    text-decoration: none;
+}
+
+.dropdown a:hover {
+    background: #f2f2f2;
+}
+
+/* Hover thì hiện menu */
+.menu-item:hover .dropdown {
+    display: block;
+}
+.dropdown {
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.menu-item:hover .dropdown {
+    display: block;
+    opacity: 1;
+}
 </style>
 
 </head>
@@ -128,18 +496,16 @@ font-size:13px;
 <span class="menu-icon">☰</span>
 
 <nav>
-    <!-- MENU  Thủy -->
-<div class="dropdown">
-<a href="#">DANH MỤC SẢN PHẨM</a>
+    <div class="menu-item">
+    <a href="danhmucsanpham.html">DANH MỤC SẢN PHẨM</a>
 
-<div class="dropdown-menu">
-<a href="kemduong.html">Kem dưỡng</a>
-<a href="#">Serum</a>
-<a href="#">Sữa rửa mặt</a>
-<a href="#">Toner</a>
-<a href="#">Kem chống nắng</a>
-</div>
-<!-- MENU  Thủy -->
+    <div class="dropdown">
+        <a href="kemduong.html">Kem dưỡng</a>
+        <a href="#">Sữa rửa mặt</a>
+        <a href="#">Serum</a>
+        <a href="#">Toner</a>
+        <a href="#">Chống nắng</a>
+    </div>
 </div>
 <a href="#">NEW</a>
 <a href="#">QUÀ TẶNG 8.3 💗</a>
@@ -164,18 +530,18 @@ font-size:13px;
 
 <!-- sản phẩm 1 -->
 <div class="product-item">
-<a href="chitiet-kem1.html">
-<img src="kem1.jpg">
-<div class="product-name">Kem dưỡng Laneige Water Bank</div>
+<a href="chitiet.html">
+<img src="vichy1.jpg">
+<div class="product-name">Kem Dưỡng Vichy Sáng Da, Mờ Thâm Nám Ban Đêm 50ml</div>
 </a>
-<div class="price">650.000đ</div>
-<a href="chitiet-kem1.html" class="buy-btn">Xem chi tiết</a>
+<div class="price">1,195,000đ</div>
+<a href="chitiet.html" class="buy-btn">Xem chi tiết</a>
 </div>
 
 <!-- sản phẩm 2 -->
 <div class="product-item">
 <a href="chitiet-kem2.html">
-<img src="kem2.jpg">
+<img src="sp2.jpg">
 <div class="product-name">Kem dưỡng Neutrogena Hydro Boost</div>
 </a>
 <div class="price">420.000đ</div>
@@ -185,7 +551,7 @@ font-size:13px;
 <!-- sản phẩm 3 -->
 <div class="product-item">
 <a href="chitiet-kem3.html">
-<img src="kem3.jpg">
+<img src="sp3.jpg">
 <div class="product-name">Kem dưỡng Hada Labo Advanced</div>
 </a>
 <div class="price">310.000đ</div>
@@ -195,7 +561,7 @@ font-size:13px;
 <!-- sản phẩm 4 -->
 <div class="product-item">
 <a href="chitiet-kem4.html">
-<img src="kem4.jpg">
+<img src="sp4.jpg">
 <div class="product-name">Kem dưỡng Innisfree Green Tea</div>
 </a>
 <div class="price">390.000đ</div>
@@ -205,7 +571,7 @@ font-size:13px;
 <!-- sản phẩm 5 -->
 <div class="product-item">
 <a href="chitiet-kem5.html">
-<img src="kem5.jpg">
+<img src="sp5.png">
 <div class="product-name">Kem dưỡng Nivea Soft</div>
 </a>
 <div class="price">120.000đ</div>
@@ -219,24 +585,53 @@ font-size:13px;
 
 <div class="footer-container">
 
+<!-- CỘT 1 -->
 <div class="footer-col">
 <h3>HỖ TRỢ KHÁCH HÀNG</h3>
-<p>Hotline: 0868515565</p>
+
+<p class="hotline">Hotline: <span>0868515565</span></p>
 <a href="#">Các câu hỏi thường gặp</a>
+<a href="#">Gửi yêu cầu hỗ trợ</a>
 <a href="#">Hướng dẫn đặt hàng</a>
+<a href="#">Phương thức vận chuyển</a>
 <a href="#">Chính sách đổi trả</a>
 </div>
 
+
+<!-- CỘT 2 -->
 <div class="footer-col">
-<h3>VỀ HASAKI.VN</h3>
-<a href="#">Giới thiệu</a>
+<h3>VỀ BEAUTY COSMETIC</h3>
+
+<a href="#">Giới thiệu Beauty Cosmetic</a>
 <a href="#">Chính sách bảo mật</a>
+<a href="#">Điều khoản sử dụng</a>
+<a href="#">Beauty Cosmetic cẩm nang</a>
+<a href="#">Tuyển dụng</a>
 <a href="#">Liên hệ</a>
+</div>
+
+
+<!-- CỘT 3 -->
+<div class="footer-col">
+<h3>HỢP TÁC & LIÊN KẾT</h3>
+<div class="social">
+<i class="fa-brands fa-facebook"></i>
+<i class="fa-brands fa-tiktok"></i>
+<i class="fa-brands fa-instagram"></i>
+</div>
+
+<h4>THANH TOÁN</h4>
+
+<div class="payment">
+<img src="visa.jpg">
+<img src="atm.png">
+<img src="cod.png">
+</div>
+
 </div>
 
 </div>
 
 </footer>
-
 </body>
 </html>
