@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -62,7 +63,6 @@
         <a href="#">Chống nắng</a>
     </div>
 </div>
-<a href="new.html">NEW</a>
 <a href="quatang.html">QUÀ TẶNG 8.3 💗</a>
 <a href="chamsocda.html">CHĂM SÓC DA</a>
 <a href="trangdiem.html">TRANG ĐIỂM</a>
@@ -90,39 +90,39 @@
 <div class="product-slider" id="slider1">
 
 <div class="product-card">
-<a href="kemduong.html">
-<img src="kem-gel-dau-duong.jpg">
-<p>6789 đã bán</p>
-<h4>Kem/Gel/Dầu dưỡng</h4>
-</a>
+  <a href="kemduong.html">
+   <img data-src="kem-gel-dau-duong.jpg" class="lazy">  
+    <p>6789 đã bán</p>
+    <h4>Kem/Gel/Dầu dưỡng</h4>
+  </a>
 </div>
 
 <div class="product-card">
-<img src="serum-tinh-chat.jpg">
+<img data-src="serum-tinh-chat.jpg" class="lazy">
 <p>8793 đã bán</p>
 <h4>Serum tinh chất</h4>
 </div>
 
 <div class="product-card">
-<img src="sua-rua-mat.jpg">
+<img data-src="sua-rua-mat.jpg" class="lazy">
 <p>9754 đã bán</p>
 <h4>Sữa rửa mặt</h4>
 </div>
 
 <div class="product-card">
-<img src="sua-tam.jpg">
+<img data-src="sua-tam.jpg" class="lazy">
 <p>6732 đã bán</p>
 <h4>Sữa tắm</h4>
 </div>
 
 <div class="product-card">
-<img src="chong-nang-da-mat.jpg">
+<img data-src="chong-nang-da-mat.jpg" class="lazy">
 <p>7433 đã bán</p>
 <h4>Chống nắng da mặt</h4>
 </div>
 
 <div class="product-card">
-<img src="toner-nuoc-can-bang-da.jpg">
+<img data-src="toner-nuoc-can-bang-da.jpg" class="lazy">
 <p>7878 đã bán</p>
 <h4>Toner/Nước cân bằng da</h4>
 </div>
@@ -134,32 +134,32 @@
 <div class="product-slider" id="slider2">
 
 <div class="product-card">
-<img src="sontinbong.jpg">
+<img data-src="sontinbong.jpg" class="lazy">
 <h4>Son Tint Bóng B.O.M Lip Flash Tint 3g</h4>
 </div>
 
 <div class="product-card">
-<img src="tinhchatduongda.jpg">
+<img data-src="tinhchatduongda.jpg" class="lazy">
 <h4>Tinh Chất Dưỡng Eucerin Hỗ Trợ Sáng Da, Giảm Thâm Mụn Dermopure Clinical Triple Action 40ml</h4>
 </div>
 
 <div class="product-card">
-<img src="taytebaochet.jpg">
+<img data-src="taytebaochet.jpg" class="lazy">
 <h4>Tẩy Tế Bào Chết Caryophy Ngăn Ngừa Mụn Smart Peeling Gel 250ml</h4>
 </div>
 
 <div class="product-card">
-<img src="colorkey.jpg">
+<img data-src="colorkey.jpg" class="lazy">
 <h4>Kem Dưỡng Mắt Colorkey Hỗ Trợ Dưỡng Sáng & Nâng Cơ Vùng Da Mắt Luminous Ginseng Brightening & Uplifting Eye Cream 20ml</h4>
 </div>
 
 <div class="product-card">
-<img src="garnier.jpg">
+<img data-src="garnier.jpg" class="lazy">
 <h4>Nước Tẩy Trang Garnier Làm Sạch Sâu Micellar Cleansing Water</h4>
 </div>
 
 <div class="product-card">
-<img src="drceutics.jpg">
+<img data-src="drceutics.jpg" class="lazy">
 <h4>Serum Drceutics Cấp Ẩm, Căng Bóng Hyaluronic Acid + NMFs Aqua-Shining 40g</h4>
 </div>
 
@@ -220,5 +220,53 @@
 </div>
 
 </footer>
+<script>
+$(document).ready(function(){
+    // ===== 1. SLIDER =====
+    function autoSlide(sliderId){
+        let slider = $(sliderId);
+
+        setInterval(function(){
+            slider.animate({scrollLeft: slider.scrollLeft() + 220}, 600);
+
+            if(slider.scrollLeft() + slider.innerWidth() >= slider[0].scrollWidth){
+                slider.animate({scrollLeft: 0}, 600);
+            }
+        }, 2500);
+    }
+
+    autoSlide("#slider1");
+    autoSlide("#slider2");
+
+
+    // ===== 2. LAZY LOAD + FADE =====
+    function lazyLoad(){
+        $(".lazy").each(function(){
+            if($(this).offset().top < $(window).scrollTop() + $(window).height()){
+                $(this).hide()
+                       .attr("src", $(this).data("src"))
+                       .fadeIn(600);
+                $(this).removeClass("lazy");
+            }
+        });
+    }
+
+    $(window).on("scroll", lazyLoad);
+    lazyLoad();
+
+
+    // ===== 3. HOVER EFFECT (jQuery chuẩn) =====
+    $(".product-card").hover(
+        function(){
+            $(this).animate({
+                transform: "scale(1.05)"
+            }, 200);
+        },
+        function(){
+            $(this).css("transform","scale(1)");
+        }
+    );
+      });
+</script>
 </body>
 </html>
